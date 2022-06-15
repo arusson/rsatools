@@ -31,7 +31,7 @@ The installation of is easy: clone the repository and `make`.
 That's it.
 
 ```
-git clone https://github.com/arusson/rsa-tools.git
+git clone https://github.com/arusson/rsatools.git
 cd rsa-tools/
 make
 ```

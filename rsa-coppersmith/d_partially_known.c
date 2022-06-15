@@ -36,6 +36,9 @@ void k_detect(GEN modulus, GEN e, GEN d0, long u, long treshold) {
 
   start_loop = avma;
   for(k = 1; k < elong; k++) {
+    /* Garbage cleaning */
+    avma = start_loop;
+
     kinv = ginvmod(stoi(k), e);
     a = gmul(inv2, gadd(kinv, n1));
     b = gsub(gsqr(a), modulus);
@@ -82,9 +85,6 @@ void k_detect(GEN modulus, GEN e, GEN d0, long u, long treshold) {
     for(i = 1; i <= 4; i++) {
       pari_printf("    * %Ps\n", gel(roots, i));
     }
-
-    /* Garbage cleaning */
-    avma = start_loop;
   }
 
   /* Print summary of results. */
@@ -127,6 +127,9 @@ int factor_d_lsb(GEN modulus, GEN e, GEN d0, long u, long k_start, long k_end, G
   
   start_loop = avma;
   for(k = k_start; k < k_end; k++) {
+    /* Garbage cleaning */
+    avma = start_loop;
+
     if (verb) {
       fprintf(stderr, "[x] Test k = %ld (max: %ld)\n", k, k_end - 1);
     }
@@ -269,9 +272,6 @@ int factor_d_lsb(GEN modulus, GEN e, GEN d0, long u, long k_start, long k_end, G
         goto end;
       }
     }
-
-    /* Garbage cleaning */
-    avma = start_loop;
   }
 
 end:

@@ -26,6 +26,9 @@ int prime_factor_recovery(GEN modulus, GEN e, GEN d, const int n_iter, GEN *p, G
 
   start_loop = avma;
   for(i = 0; i < n_iter; i++) {
+    /* Garbage cleaning */
+    avma = start_loop;
+
     g = gmodulo(randomi(modulus), modulus);
     y = powgi(g, r);
     if (gequal1(y) || gequal(y, nm1)) {
@@ -49,9 +52,6 @@ int prime_factor_recovery(GEN modulus, GEN e, GEN d, const int n_iter, GEN *p, G
       found = TRUE;
       break;
     }
-
-    /* Garbage cleaning */
-    avma = start_loop;
   }
 
 end:
