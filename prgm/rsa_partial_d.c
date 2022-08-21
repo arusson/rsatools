@@ -13,7 +13,8 @@ void print_success(GEN p, GEN q) {
 }
 
 void usage() {
-  fprintf(stderr, "Usage: ./rsa_partial_p -n <modulus> -e <public exponent> -d <lowest bits of d> -l <number of bits known>\n"
+  fprintf(stderr, "rsatools version 0.1 of 2022-08-21\n"
+                  "Usage: ./rsa_partial_p -n <modulus> -e <public exponent> -d <lowest bits of d> -l <number of bits known>\n"
                   "  -n, --modulus VAL      Modulus\n"
                   "  -e VAL                 Public exponent\n"
                   "  -d, --d0 VAL           Known lowest bits of d\n"

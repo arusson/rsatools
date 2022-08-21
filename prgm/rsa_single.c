@@ -19,7 +19,8 @@ void print_success_full(GEN p, GEN q, GEN d) {
 }
 
 void usage() {
-  fprintf(stderr, "Usage: ./rsa_single -n <modulus> [OPTIONS]\n"
+  fprintf(stderr, "rsatools version 0.1 of 2022-08-21\n"
+                  "Usage: ./rsa_single -n <modulus> [OPTIONS]\n"
                   "List of options (values are expected in decimal):\n"
                   "  -n, --modulus          Modulus\n"
                   "  -e, --exponent         Public exponent\n"
@@ -123,7 +124,7 @@ int main(int argc, char *argv[]) {
   }
 
   if (modulus == NULL) {
-    fprintf(stderr, "[!] Modulus must be provided");
+    fprintf(stderr, "[!] Modulus must be provided\n");
     usage();
     goto end;
   }

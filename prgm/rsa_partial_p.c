@@ -13,7 +13,8 @@ void print_success(GEN p, GEN q) {
 }
 
 void usage() {
-  fprintf(stderr, "Usage: ./rsa_partial_p -n <modulus> [OPTIONS]\n"
+  fprintf(stderr, "rsatools version 0.1 of 2022-08-21\n"
+                  "Usage: ./rsa_partial_p -n <modulus> [OPTIONS]\n"
                   "  -n, --modulus VAL      Modulus (mandatory)\n"
                   "The prime p partially known has the form p1*m + p0\n"
                   "Choose amongst one of the two following options:\n"

@@ -11,7 +11,7 @@
  */
 GEN sqrt_mod2(GEN a, long u) {
   GEN pow2, root1, root2, root3, root4, roots = NULL;
-  long i = 0;
+  long i;
   pari_sp av = avma;
 
   /* Solutions only if a mod 8 = 1 */

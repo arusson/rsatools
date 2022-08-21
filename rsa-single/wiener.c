@@ -34,7 +34,7 @@ GEN find_d_cvg(GEN modulus, GEN e) {
     d = gerepilecopy(av, dd);
   }
   else {
-    av = avma;
+    avma = av;
   }
 
   return d;

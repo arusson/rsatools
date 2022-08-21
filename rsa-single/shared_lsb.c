@@ -15,8 +15,6 @@ int factor_shared_lsb(GEN modulus, GEN *p, GEN *q) {
   int found = FALSE;
   pari_sp av = avma;
 
-  roots = cgetg(4, t_VEC);
-
   /* u = ceil(log2(n)/2) */
   u = (logint(modulus, gen_2) + 2) >> 1;
   roots = sqrt_mod2(modulus, u);
